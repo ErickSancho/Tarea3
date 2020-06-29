@@ -1,6 +1,6 @@
 # Tarea3
 
-Este proyecto corresponde a la **_Tarea 3_**, del curso de *Modelos probabilísticos de sistemas y señales* desarrollado por  **Erick Sancho Abarca**, en el cual se trabaja sobre la  *_Variables aleatorias múltiples_*.
+Este proyecto corresponde a la **_Tarea 3_**, del curso de *IE0405 - Modelos Probabilísticos de Señales y Sistemas* desarrollado por  **Erick Sancho Abarca**, en el cual se trabaja sobre la  *_Variables aleatorias múltiples_*.
 
 ## 1. A partir de los datos, encontrar la mejor curva de ajuste (modelo probabilístico) para las funciones de densidad marginales de X y Y.
 
@@ -74,13 +74,13 @@ Entonces empleando un código de *Python* el cual recorre la matriz de valores d
 
 La correlación como su nombre nos parece decir es una medida de asociación de dos variables aleatorias múltiples, esto representa en alguna medida una intensidad en la relación lineal entre ellas, es decir si una de las variables aumenta la otra aumenta o disminuye su valor, lo cual definen relaciones positivas pendiente positiva o relaciones negativas pendiente negativa, en caso de ser cero se definen como ortogonales. Por lo tanto en este caso las variables no son ortogonales.
 
-Ahora calculamos la **covarianza** de las variables **X** y **Y**, el cual se calcula 
+Ahora calculamos la **covarianza** de las variables **X** y **Y**, el cual se calcula como: 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C_{xy}=E[XY]-\mu_{x}&space;\mu_{y}&space;=\sum_{x}\sum_{y}xyp(x,y)&space;-&space;\mu_{x}&space;\mu_{y}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C_{xy}=E[XY]-\mu_{x}&space;\mu_{y}&space;=\sum_{x}\sum_{y}xyp(x,y)&space;-&space;\mu_{x}&space;\mu_{y}" title="C_{xy}=E[XY]-\mu_{x} \mu_{y} =\sum_{x}\sum_{y}xyp(x,y) - \mu_{x} \mu_{y}" /></a>
 
 La covarianza es un tipo de varianza entre dos variables, la cual en caso de ser positiva nos dice que la tendencia es positiva es decir son de relación directa, ambas variables crecen o decrecen a la vez, y en el caso de ser negativa, esta nos indica sobre una relación inversa entre las variables, es decir si una crece la otra decrece. Cuando la covarianza nos da un valor entorno a cero, esta nos indica que no existe alguna relación palpable entre las variables.
 
-Para este caso tenemos que la covarianza es de 0.05876146240009916, este es un valor muy cercano a cero esto nos indica que no existe una relación palpable entre las varibles.
+Para este caso tenemos que la covarianza es de 0.05876146240009916, este es un valor muy cercano a cero esto nos indica que no existe una relación palpable entre las variables.
 
 
 Ahora calculamos el **coeficiente de Correlación (Pearson)**, el cual se calcula como:
@@ -89,7 +89,7 @@ Ahora calculamos el **coeficiente de Correlación (Pearson)**, el cual se calcul
 
 El coeficiente de correlación lineal de Pearson, es un coeficiente que indica la correlación lineal de dos variables aleatorias, en otras palabras es una medida de la correlación, este no habla sobre la tendencia de los datos a una línea recta, este puede tomar valores de entre -1 y +1, donde -1 nos dice que los datos se alinean perfectamente en una recta con pendiente negativa y un 1 nos indica que los datos se alinean perfectamente en un línea recta con pendiente positiva, y cero nos indica que estos no presentan tendencia lineal. 
 
-En este caso tenemos que se obtuvo un coeficiente de correlación línea de Pearson de 0.0096652 aproximadamente lo cual es muy cercano a cero por lo tanto se concluye que los datos no presentan una correlación lineal, y los datos no tienden a una línea recta, con esto se reafirma la independencia que existe entre ambas varibles aleatorias.
+En este caso tenemos que se obtuvo un coeficiente de correlación línea de Pearson de 0.0096652 aproximadamente lo cual es muy cercano a cero por lo tanto se concluye que los datos no presentan una correlación lineal, y los datos no tienden a una línea recta, con esto se reafirma la independencia que existe entre ambas variables aleatorias.
 
 
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
@@ -109,4 +109,4 @@ Ahora se gráfica la función de densidad conjunta a partir del modelo, para ell
 
 ![Grafica de la funcion de densidad conjunta a partir del modelo](Graficas/Superficie_densidad_conjunta_del_modelo.png)
 
-Como se puede apreciar en las gráficas anteriores, la gráfica del modelo concuerda muy bien con la forma de la gráfica obtenida de los datos, sin embargo varían en la magnitud esto se puede deber al ruido existente, por cómo se puede ver en la curva de mejor ajuste, no alcanza el valor máximo que posee la función de densidad marginal en ambas variables. Entonces podemos concluir que para este caso el modelo describe muy bien la forma de la distribución de los datos, sin embargo varia en la magnitud de las probabilidades que presentas los datos.
+Como se puede apreciar en las gráficas anteriores, la gráfica del modelo concuerda muy bien con la forma de la gráfica obtenida de los datos, sin embargo varían en la magnitud esto se puede deber al ruido existente, por cómo se puede ver en la curva de mejor ajuste, no alcanza el valor máximo que posee la función de densidad marginal en ambas variables. Entonces podemos concluir que para este caso el modelo describe muy bien la forma de la distribución de los datos, sin embargo varia en la magnitud de las probabilidades que presentan los datos.
