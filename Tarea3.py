@@ -54,14 +54,18 @@ sumaX=np.sum(datos_mod, axis=1)
 print("La suma para el eje x para la funcion de densidad de X es: ", np.sum(sumaX))
 print("La suma para el eje y para la funcion de densidad de Y es: ", np.sum(sumaY))
 
-plt.plot(valoresY, sumaY)
-plt.title("Funcion de densidad marginal para Y")
-plt.savefig("Graficas/Grafica_para_Y.png")
-plt.cla()
-
 plt.plot(valoresX, sumaX)
+plt.xlabel("Valores de X")
+plt.ylabel("Probabilidad")
 plt.title("Funcion de densidad marginal para X")
 plt.savefig("Graficas/Grafica_para_X.png")
+plt.cla()
+
+plt.plot(valoresY, sumaY)
+plt.xlabel("Valores de Y")
+plt.ylabel("Probabilidad")
+plt.title("Funcion de densidad marginal para Y")
+plt.savefig("Graficas/Grafica_para_Y.png")
 plt.cla()
 
 ########################
@@ -90,6 +94,8 @@ Yys=gaussiana(valoresY,paramY[0],paramY[1])
 #Genero los plots
 plt.plot(valoresX, sumaX)
 plt.plot(valoresX,Xys)
+plt.xlabel("Valores de X")
+plt.ylabel("Probabilidad")
 plt.title("Curva de ajuste gaussiana para X")
 plt.savefig("Graficas/Grafica_para_X_Curva_de_ajuste_normal.png")
 plt.cla()
@@ -97,6 +103,8 @@ plt.cla()
 
 plt.plot(valoresY, sumaY)
 plt.plot(valoresY,Yys)
+plt.xlabel("Valores de Y")
+plt.ylabel("Probabilidad")
 plt.title("Curva de ajuste gaussiana para X")
 plt.savefig("Graficas/Grafica_para_Y_Curva_de_ajuste_normal.png")
 plt.cla()
@@ -130,6 +138,8 @@ for i in range(0,len(valoresY)):
 #Genero los plots
 plt.plot(valoresX, sumaX)
 plt.plot(valoresX,Xys_rayleigh)
+plt.xlabel("Valores de X")
+plt.ylabel("Probabilidad")
 plt.title("Curva de ajuste rayleigh para X")
 plt.savefig("Graficas/Grafica_para_X_Curva_de_ajuste_rayleigh.png")
 plt.cla()
@@ -137,6 +147,8 @@ plt.cla()
 
 plt.plot(valoresY, sumaY)
 plt.plot(valoresY,Yys_rayleigh)
+plt.xlabel("Valores de Y")
+plt.ylabel("Probabilidad")
 plt.title("Curva de ajuste rayleigh para Y")
 plt.savefig("Graficas/Grafica_para_Y_Curva_de_ajuste_rayleigh.png")
 plt.cla()
@@ -172,6 +184,8 @@ for i in range(0,len(valoresY)):
 #Genero los plots
 plt.plot(valoresX, sumaX)
 plt.plot(valoresX,Xys_exp)
+plt.xlabel("Valores de X")
+plt.ylabel("Probabilidad")
 plt.title("Curva de ajuste exponencial para X")
 plt.savefig("Graficas/Grafica_para_X_Curva_de_ajuste_exp.png")
 plt.cla()
@@ -179,7 +193,9 @@ plt.cla()
 
 plt.plot(valoresY, sumaY)
 plt.plot(valoresY,Yys_exp)
-plt.title("Curva de ajuste exponancial para Y")
+plt.xlabel("Valores de Y")
+plt.ylabel("Probabilidad")
+plt.title("Curva de ajuste exponencial para Y")
 plt.savefig("Graficas/Grafica_para_Y_Curva_de_ajuste_exp.png")
 plt.cla()
 
@@ -214,6 +230,8 @@ for i in range(0,len(valoresY)):
 #Genero los plots
 plt.plot(valoresX, sumaX)
 plt.plot(valoresX,Xys_uni)
+plt.xlabel("Valores de X")
+plt.ylabel("Probabilidad")
 plt.title("Curva de ajuste uniforme para X")
 plt.savefig("Graficas/Grafica_para_X_Curva_de_ajuste_uni.png")
 plt.cla()
@@ -221,6 +239,8 @@ plt.cla()
 
 plt.plot(valoresY, sumaY)
 plt.plot(valoresY,Yys_uni)
+plt.xlabel("Valores de Y")
+plt.ylabel("Probabilidad")
 plt.title("Curva de ajuste uniforme para Y")
 plt.savefig("Graficas/Grafica_para_Y_Curva_de_ajuste_uni.png")
 plt.cla()
@@ -313,10 +333,10 @@ plt.title("Funcion de densidad conjunta a partir de los datos")
 plt.xlabel("Valores de X")
 plt.ylabel("Valores de Y")
 fig.tight_layout()
-
 plt.savefig("Graficas/Superficie_densidad_conjunta.png")
-
 plt.cla()
+
+#################
 
 def gaussianaR2(x,y,ax,ay,bx,by):
     #tpx=(-(x-ax)**2)/(2*bx)
@@ -349,7 +369,5 @@ plt.xlabel("Valores de X")
 plt.ylabel("Valores de Y")
 plt.title("Funcion de densidad conjunta a partir del modelo calculado")
 fig.tight_layout()
-
 plt.savefig("Graficas/Superficie_densidad_conjunta_del_modelo.png")
 plt.cla()
-
