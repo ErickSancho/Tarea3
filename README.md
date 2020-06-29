@@ -94,7 +94,12 @@ En este caso tenemos que se obtuvo un coeficiente de correlación línea de Pear
 
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
 
-En esta sección se trabaja en las gráficas de las funciones de densidad marginal y la densidad conjunta, donde nos centramos en las gráficas de la densidad conjunta ya que las gráficas de la densidad marginal fueron calculadas en la primera sección. Entonces para realizar el gráfico de la función de densidad conjunta se emplearon las funciones:
+En esta sección se trabaja en las gráficas de las funciones de densidad marginal y la densidad conjunta, entonces para las gráficas de la función de densidad marginal de las variables **X** y **Y**, empleando la libreria ` matplotlib.pyplot`, se obtuvieron las siguientes gráficas:
+
+![Grafica para X mejor ajuste](Codigos/Graficas/Curva_de_mejor_ajuste_de_X.png)
+![Grafica para y mejor ajuste](Codigos/Graficas/Curva_de_mejor_ajuste_de_Y.png)
+
+Ahora para realizar el gráfico de la función de densidad conjunta se emplearon las funciones:
 
 ~~~
 import matplotlib.pyplot  as plt
