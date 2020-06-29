@@ -12,8 +12,8 @@ Primero se graficaron las funciones de densidad de cada variable, esto empleando
 
 Donde <a href="https://www.codecogs.com/eqnedit.php?latex=\varphi" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\varphi" title="\varphi" /></a> es la variale para la cual se está calculando al funcion, y <a href="https://www.codecogs.com/eqnedit.php?latex=\epsilon" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\epsilon" title="\epsilon" /></a> es la segunda variable en este caso serían "x" y "y" o viceversa, dependiendo de la función que se esté calculando es ese momento. Entonces a partir de esta ecuación se obtuvo los vectores denominados `sumaX` y `sumaY`, de los cuales se calculó la función de densidad empleando la función `pyplot` llamada en el código como `plt`, y el resultado se muestra a continuación:
 
-![Grafica para X](Graficas/Grafica_para_X.png)
-![Grafica para Y](Graficas/Grafica_para_Y.png)
+![Grafica para X](Codigos/Graficas/Grafica_para_X.png)
+![Grafica para Y](Codigos/Graficas/Grafica_para_Y.png)
 
 
 Para encontrar la curva de mejor ajuste de la función de densidad marginal para cada variable, se emplea la función `curve_fit` del módulo `scipy.optimize`, esta función toma como parámetros una función de **_Python_** que calcula la función con la que se desea comparar, y los valores de eje "x" y eje "y", de la función que se quiere ajustar, y devuelve los parámetros que posee la función que se ingresó para comparar. Entonces para obtener la curva de mejor ajuste se compara con las cuatro principales distribuciones las cuales son la "normal", "rayleigh", "exponencial" y "uniforme". Entonces de las gráficas se obtuvo que la curva que mejor se ajusta a esta distribución en ambos casos es la distribución normal. Entonces la distribución normal presenta las siguientes ecuaciones, para **X** y **Y**:
@@ -28,8 +28,8 @@ Entonces de la funcion `curve_fit()` se obtuvo que para la variable **X** los pa
  y <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\sigma" title="\sigma" /></a> son `[15.0794609   6.02693776]` respectivamente.
  Por lo tanto se obtuvieron las siguientes graficas con ajuste normal para las funciones de densidad marginal de las variables **X** y **Y**:
 
-![Grafica para X](Graficas/Grafica_para_X_Curva_de_ajuste_normal.png)
-![Grafica para Y](Graficas/Grafica_para_Y_Curva_de_ajuste_normal.png)
+![Grafica para X](Codigos/Graficas/Grafica_para_X_Curva_de_ajuste_normal.png)
+![Grafica para Y](Codigos/Graficas/Grafica_para_Y_Curva_de_ajuste_normal.png)
 
 
 ## 2. Asumir independencia de X y Y, ¿cuál es entonces la función de densidad conjunta que modela los datos?
@@ -103,10 +103,10 @@ from matplotlib import cm
 
 Para poder graficar la función de densidad conjunta de los datos fue necesario emplear la configuración de los datos contenidos en el archivo `xyp.csv`, el cual contiene los mismos datos que el archivo `xy.csv`, pero en un formato de 3 columnas lo cual facilita la obtención de los datos de probabilidad necesarios para realizar el gráfico. Entonces a partir de estos valores de probabilidad se creó una lista la cual contiene los datos de probabilidad ordenados por filas, es decir los datos de la primera fila seguidos por los datos de la segunda fila, así hasta llegar a la última fila. Entonces con las funciones mencionadas se encontró que la gráfica para el modelo es la siguiente:
 
-![Grafica para X en 3d](Graficas/Superficie_densidad_conjunta.png)
+![Grafica para X en 3d](Codigos/Graficas/Superficie_densidad_conjunta.png)
 
 Ahora se gráfica la función de densidad conjunta a partir del modelo, para ello se implementó una función de *python* que recibe como parámetros los valores de x y y, y los valores de la media y la desviación calculadas con la función `curve_fit`. Con ello se creó el vector que contiene los valores de las probabilidades para cada par ordenado de valores de **X** y **Y**, y a partir de las mismas funciones con la que se calculó la gráfica anterior, se obtuvo la siguiente gráfica:
 
-![Grafica de la funcion de densidad conjunta a partir del modelo](Graficas/Superficie_densidad_conjunta_del_modelo.png)
+![Grafica de la funcion de densidad conjunta a partir del modelo](Codigos/Graficas/Superficie_densidad_conjunta_del_modelo.png)
 
 Como se puede apreciar en las gráficas anteriores, la gráfica del modelo concuerda muy bien con la forma de la gráfica obtenida de los datos, sin embargo varían en la magnitud esto se puede deber al ruido existente, por cómo se puede ver en la curva de mejor ajuste, no alcanza el valor máximo que posee la función de densidad marginal en ambas variables. Entonces podemos concluir que para este caso el modelo describe muy bien la forma de la distribución de los datos, sin embargo varia en la magnitud de las probabilidades que presentan los datos.
