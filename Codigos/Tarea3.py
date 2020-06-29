@@ -245,6 +245,29 @@ plt.title("Curva de ajuste uniforme para Y")
 plt.savefig("Graficas/Grafica_para_Y_Curva_de_ajuste_uni.png")
 plt.cla()
 
+
+
+########
+#Graficas de mejor ajuste para cada variable
+########
+#Grafica para X
+plt.plot(valoresX,Xys)
+plt.xlabel("Valores de X")
+plt.ylabel("Probabilidad")
+plt.title("Curva de ajuste para X")
+plt.savefig("Graficas/Curva_de_mejor_ajuste_de_X.png")
+plt.cla()
+
+#Grafica para Y
+plt.plot(valoresY,Yys)
+plt.xlabel("Valores de Y")
+plt.ylabel("Probabilidad")
+plt.title("Curva de ajuste para Y")
+plt.savefig("Graficas/Curva_de_mejor_ajuste_de_Y.png")
+plt.cla()
+
+
+
 #######################################
 #Calculo de la Covarianza, Correlaccion y coeficiente de Correlacion a partir de los datos
 ######################################
